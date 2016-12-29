@@ -1,14 +1,10 @@
 package org.porotype.tktest;
 
 import com.vaadin.addon.touchkit.server.TouchKitServlet;
-import com.vaadin.cdi.CDIUIProvider;
 import com.vaadin.cdi.server.VaadinCDIServletService;
 import com.vaadin.server.DeploymentConfiguration;
 import com.vaadin.server.ServiceException;
-import com.vaadin.server.SessionInitEvent;
-import com.vaadin.server.SessionInitListener;
 import com.vaadin.server.VaadinServletService;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 
 @SuppressWarnings("serial")

@@ -1,13 +1,14 @@
 package org.porotype.tktest;
 
 
+import com.vaadin.addon.touchkit.ui.NavigationManager;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 /**
  * The UI's "main" class
@@ -17,6 +18,10 @@ import javax.annotation.PostConstruct;
 @Theme("touchkit")
 @CDIUI("")
 public class MyTouchKitUI extends UI {
+    
+    @Inject
+    MenuView menuView;
+    
     @Override
     protected void init(VaadinRequest request) {
     }
@@ -24,6 +29,6 @@ public class MyTouchKitUI extends UI {
     
     @PostConstruct
     public void init() {
-        setContent(new Label("CDI chain works!"));
+        setContent(new NavigationManager(menuView));
     }
 }

@@ -4,6 +4,7 @@ import com.vaadin.addon.touchkit.ui.DatePicker;
 import com.vaadin.addon.touchkit.ui.EmailField;
 import com.vaadin.addon.touchkit.ui.NavigationView;
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
+import com.vaadin.cdi.UIScoped;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
@@ -12,6 +13,7 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
 
 @SuppressWarnings("serial")
+@UIScoped
 public class FormView extends NavigationView {
 
     public FormView() {
